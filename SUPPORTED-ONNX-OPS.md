@@ -126,7 +126,7 @@ functionality.
 | [Multinomial][108]               | ❌             | ❌           |
 | [Neg][109]                       | ✅             | ✅           |
 | [NegativeLogLikelihoodLoss][110] | ❌             | ❌           |
-| [NonMaxSuppression][112]         | ❌             | ❌           |
+| [NonMaxSuppression][112]         | ✅             | ✅           |
 | [NonZero][113]                   | ✅             | ✅           |
 | [Not][114]                       | ✅             | ✅           |
 | [OneHot][115]                    | ✅             | ✅           |
