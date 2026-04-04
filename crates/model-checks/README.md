@@ -115,5 +115,6 @@ Other backends (wgpu, metal) already select the best GPU by default; ndarray is 
 | `rf-detr/`                 | RF-DETR Small                       | Roboflow            |
 | `silero-vad/`              | Silero VAD                          | Silero              |
 | `smollm/`                  | SmolLM / SmolLM2 (135M)             | HuggingFace         |
+| `squeezenet/`              | SqueezeNet 1.0                      | ONNX Model Zoo      |
 | `stable-diffusion-xl/`     | Stable Diffusion XL 1.0 (UNet)      | Stability AI        |
 | `yolo/`                    | YOLO (v5/v8/v10/v11/v12)            | Ultralytics         |
