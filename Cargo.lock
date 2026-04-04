@@ -904,6 +904,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "burn-onnx-model-checks-squeezenet"
+version = "0.1.0"
+dependencies = [
+ "burn",
+ "burn-onnx",
+ "burn-store",
+ "model-checks-common",
+]
+
+[[package]]
 name = "burn-onnx-model-checks-stable-diffusion-xl"
 version = "0.1.0"
 dependencies = [
