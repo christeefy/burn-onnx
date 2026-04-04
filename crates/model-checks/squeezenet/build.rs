@@ -1,0 +1,25 @@
+use burn_onnx::ModelGen;
+
+fn main() {
+    let artifacts = model_checks_common::artifacts_dir_build("squeezenet");
+    let onnx_path = artifacts.join("squeezenet.onnx");
+
+    println!("cargo:rerun-if-changed={}", onnx_path.display());
+    println!("cargo:rerun-if-changed=build.rs");
+    println!("cargo:rerun-if-env-changed=BURN_CACHE_DIR");
+
+    if !onnx_path.exists() {
+        eprintln!("Error: ONNX model file not found at '{}'", onnx_path.display());
+        eprintln!();
+        eprintln!("Please run the following command to download and prepare the model:");
+        eprintln!("  uv run get_model.py");
+        eprintln!();
+        eprintln!("This will download the SqueezeNet 1.0 model and apply shape inference.");
+        std::process::exit(1);
+    }
+
+    ModelGen::new()
+        .input(onnx_path.to_str().unwrap())
+        .out_dir("model/")
+        .run_from_script();
+}
